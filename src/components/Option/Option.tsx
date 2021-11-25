@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import checkUndefined from "../../utils/undefinedCheck";
-interface OptionProps {
+export interface OptionProps {
   id: string;
   label: string;
   name?: string;
@@ -27,7 +27,7 @@ export function Option(props: OptionProps) {
   );
 }
 
-Option.PropTypes = {
+export const optionPropTypes = {
   label: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -35,6 +35,8 @@ Option.PropTypes = {
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
 };
+
+Option.PropTypes = optionPropTypes;
 
 Option.defaultProps = {
   onClick: undefined,
