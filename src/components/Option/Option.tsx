@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import checkUndefined from "../../utils/undefinedCheck";
-
 interface OptionProps {
   id: string;
   label: string;
@@ -11,10 +10,7 @@ interface OptionProps {
   onChange?: () => void;
 }
 
-
-
 export function Option(props: OptionProps) {
-    console.log(checkUndefined(props.checked));
     
   return (
     <>

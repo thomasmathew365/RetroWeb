@@ -6,7 +6,8 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=ee36266e8179"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^17.0.0",
     "@vitejs/plugin-react": "^1.0.0",
     "babel-loader": "^8.2.3",
+    "chromatic": "^6.0.6",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
   }
