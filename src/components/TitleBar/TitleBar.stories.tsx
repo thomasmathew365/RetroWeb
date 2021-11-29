@@ -41,7 +41,7 @@ WithHelpButton.args = {
     text: 'The Most Helpful Title Bar',
     buttonsList: [{
         type: 'help',
-        onClick: () => console.warn('Minimize')
+        onClick: () => console.warn('Help')
     },
     {
         type: 'close',
