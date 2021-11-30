@@ -2,14 +2,25 @@ import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "./Context.js";
 
-interface TabProps {
-  selected?: boolean;
-  onClick?: () => void;
-  keyValue: number;
+interface ReactChildrenProp {
   children: React.ReactNode;
 }
 
-export function Tabs(props) {
+interface TabProps extends ReactChildrenProp {
+  selected?: boolean;
+  onClick?: () => void;
+  keyValue: number;
+}
+
+interface TabsProps extends ReactChildrenProp{
+  defaultSelected: number;
+}
+
+interface TabPanel extends ReactChildrenProp {
+  keyValue: number;
+}
+
+export function Tabs(props: TabsProps) {
   const [context, setContext] = useState(props.defaultSelected);
 
   return (
@@ -19,7 +30,7 @@ export function Tabs(props) {
   );
 }
 
-export function TabList(props) {
+export function TabList(props: ReactChildrenProp) {
   return <menu role="tablist">{props.children}</menu>;
 }
 
@@ -40,7 +51,7 @@ export function Tab(props: TabProps) {
   );
 }
 
-export function TabPanel(props) {
+export function TabPanel(props: TabPanel) {
   const [context, setContext] = useContext(Context);
   return (
     <article
