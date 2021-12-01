@@ -1,0 +1,25 @@
+.taskbar-button {
+  background: linear-gradient(
+      to bottom,
+      #245edb 0%,
+      #3f8cf3 9%,
+      #245edb 18%,
+      #245edb 92%,
+    )
+    center/cover no-repeat;
+  color: #fff;
+  color: #fff;
+  padding: 5px;
+  /* border: 1px solid #333; */
+  display: inline-block;
+  height: 23px;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.taskbar-button:hover {
+  box-shadow: 0px 0px 10px #333 inset;
+}
+.taskbar-button.active {
+  box-shadow: 0px 0px 15px #333 inset;
+}

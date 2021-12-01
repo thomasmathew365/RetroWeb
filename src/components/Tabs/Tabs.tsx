@@ -20,6 +20,9 @@ interface TabPanel extends ReactChildrenProp {
   keyValue: number;
 }
 
+export const MOCK_TABS = ["Tab A", "Tab B", "Tab C"];
+
+
 export function Tabs(props: TabsProps) {
   const [context, setContext] = useState(props.defaultSelected);
 
@@ -61,6 +64,30 @@ export function TabPanel(props: TabPanel) {
     >
       {props.children}
     </article>
+  );
+}
+
+export function TabScreen(props: any) {
+  return (
+    <Tabs defaultSelected={2}>
+      <TabList>
+        {MOCK_TABS.map((text, key) => {
+          return (
+            <Tab key={key} keyValue={key + 1}>
+              {text}
+            </Tab>
+          );
+        })}
+      </TabList>
+      {MOCK_TABS.map((text, key) => {
+        return (
+          <TabPanel
+            key={key}
+            keyValue={key + 1}
+          >{`This is ${text} Panel.`}</TabPanel>
+        );
+      })}
+    </Tabs>
   );
 }
 

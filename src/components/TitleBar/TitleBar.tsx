@@ -37,6 +37,14 @@ export function TitleBar(props: TitleBarProps) {
   );
 }
 
+export function WindowBody({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="window-body">
+      <p>There's so much room for activities!</p>
+    </div>
+  );
+}
+
 TitleBar.PropTypes = {
   text: PropTypes.string,
   children: PropTypes.node,

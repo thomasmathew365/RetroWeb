@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TitleBar } from "./TitleBar";
 
 export default {
-  title: "Retro Web /XP/TitleBar",
+  title: "Retro Web /XP/Window/Title Bar",
   component: TitleBar,
   decorators: [
     (story) => (
