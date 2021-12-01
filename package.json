@@ -1,21 +1,33 @@
 {
   "name": "retroweb",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [ "dist", "README.md" ],
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/thomasmathew365/RetroWeb.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=ee36266e8179"
+    "chromatic": "npx chromatic --project-token=ee36266e8179",
+    "build-lib": "rm -rf dist && NODE_ENV=production babel src/ --out-dir dist --copy-files"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "xp.css": "^0.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
