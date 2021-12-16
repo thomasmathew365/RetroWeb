@@ -1,13 +1,23 @@
 {
-  "name": "retroweb",
+  "name": "@thomasmathew/retroweb",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "description": "Windows XP React components",
+  "author": "Thomas Mathew",
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/thomasmathew365/RetroWeb.git"
+    "type": "git",
+    "url": "git+https://github.com/thomasmathew365/RetroWeb.git"
   },
   "scripts": {
     "dev": "vite",
@@ -28,6 +38,7 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
+    "@babel/preset-typescript": "^7.16.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",

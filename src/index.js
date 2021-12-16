@@ -12,7 +12,7 @@ import {
   MaxButton,
   CloseButton,
   HelpButton,
-} from "../components/TitleButtons/TitleButtons";
+} from "./components/TitleButtons/TitleButtons";
 
 export {
   Button,

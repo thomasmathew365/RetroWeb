@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { TitleBar } from "./TitleBar";
 
 export default {
-  title: "Retro Web /XP/Window/Title Bar",
+  title: "Retro Web /XP/TitleBar",
   component: TitleBar,
   decorators: [
     (story) => (
@@ -39,6 +39,19 @@ WithDefaultButtons.args = {
 export const WithHelpButton = Template.bind({});
 WithHelpButton.args = {
     text: 'The Most Helpful Title Bar',
+    buttonsList: [{
+        type: 'help',
+        onClick: () => console.warn('Help')
+    },
+    {
+        type: 'close',
+        onClick: () => console.warn('Close')
+    }]
+}
+
+export const window = Template.bind({});
+window.args = {
+    text: 'Window',
     buttonsList: [{
         type: 'help',
         onClick: () => console.warn('Help')
